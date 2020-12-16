@@ -1,0 +1,57 @@
+{
+  "name": "antd-resizeable-sider",
+  "version": "1.0.0",
+  "description": "A resizeable sider for use with the antd ui library",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeswr/antd-resizeable-sidebar.git"
+  },
+  "keywords": [
+    "antd",
+    "ui",
+    "resizeable",
+    "resize",
+    "sider",
+    "sidebar",
+    "react-component"
+  ],
+  "author": "Jesse Wright <jesse.wright@anu.edu.au>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeswr/antd-resizeable-sidebar/issues"
+  },
+  "homepage": "https://github.com/jeswr/antd-resizeable-sidebar#readme",
+  "devDependencies": {
+    "@testing-library/react": "^11.2.2",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.15.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "jest": "^26.6.3",
+    "pre-commit": "^1.2.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^4.1.3"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "pre-commit": [
+    "build",
+    "lint",
+    "test"
+  ]
+}
