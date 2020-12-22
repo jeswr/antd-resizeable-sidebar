@@ -5,13 +5,15 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "index.tsx",
-    "sidebar.tsx"
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/sidebar.js",
+    "dist/sidebar.ts"
   ],
   "scripts": {
     "build": "tsc",
     "lint": "eslint",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -71,13 +73,18 @@
   ],
   "jest": {
     "preset": "ts-jest",
+    "testMatch": [ "**/__tests__/**/*-test.[jt]s?(x)" ],
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "dist/*.tsx"
+      "src/*.tsx"
     ],
-    "coverageReporters": [
-      "json",
-      "html"
-    ]
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }
