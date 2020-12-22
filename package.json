@@ -73,7 +73,9 @@
   ],
   "jest": {
     "preset": "ts-jest",
-    "testMatch": [ "**/__tests__/**/*-test.[jt]s?(x)" ],
+    "testMatch": [
+      "**/__tests__/**/*-test.[jt]s?(x)"
+    ],
     "collectCoverage": true,
     "collectCoverageFrom": [
       "src/*.tsx"
