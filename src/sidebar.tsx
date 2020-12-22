@@ -1,30 +1,29 @@
-import Sider, { SiderProps } from 'antd/lib/layout/Sider'
-// eslint-disable-next-line no-use-before-define
-import React, { useReducer } from 'react'
-
+import { SiderProps } from "antd/lib/layout/Sider";
+import React, { useReducer } from "react";
+import Sider from "antd/lib/layout/Sider";
 // Add tests to make sure most behavior matches siders
 // TODO: Make work on RHS
 // TODO: Optimize
 
 // Cast minwidth as number to allow for % etc.
-function GetWidth (props: SiderProps, xpos: number): number | (string & {}) {
+function GetWidth(props: SiderProps, xpos: number): number | (string & {}) {
   if (typeof props.style?.minWidth === 'number' && xpos < props.style.minWidth) {
-    return props.style.minWidth
+    return props.style.minWidth;
   } else if (typeof props.style?.maxWidth === 'number' && xpos > props.style.maxWidth) {
-    return props.style.maxWidth
+    return props.style.maxWidth;
   } else {
-    return xpos
+    return xpos;
   }
 }
 
-export function AntdResisableSider (props: SiderProps) {
+export function AntdResizeableSidebar(props: SiderProps) {
   const [state, dispatch] = useReducer((state: { down: boolean, resizable: boolean, width: number | (string & {}) }, action: MouseEvent | React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (action.type === 'mousedown' && state.resizable) {
       return { down: true, width: GetWidth(props, action.pageX), resizable: true }
     } else if (action.type === 'mouseup' && state.down) {
-      return { down: false, width: GetWidth(props, action.pageX), resizable: action.pageX - 7 < state.width && action.pageX + 7 > state.width }
+      return { down: false, width: GetWidth(props, action.pageX), resizable:  action.pageX - 7 < state.width && action.pageX + 7 > state.width  }
     } else if (action.type === 'mousemove' && action.pageX !== state.width) {
-      const resizable = action.pageX - 7 < state.width && action.pageX + 7 > state.width
+      const resizable = action.pageX - 7 < state.width && action.pageX + 7 > state.width;
       if (state.down) {
         return { down: true, width: GetWidth(props, action.pageX), resizable: true }
       } else if (state.resizable !== resizable) {
@@ -38,7 +37,7 @@ export function AntdResisableSider (props: SiderProps) {
     //   return { ...state, resizable }
     // }
     return state
-  }, { down: false, resizable: false, width: 200 })
+  }, { down: false, resizable: false, width: 200 });
   document.addEventListener('mouseup', dispatch)
   document.addEventListener('mousemove', dispatch)
   return (
@@ -46,16 +45,16 @@ export function AntdResisableSider (props: SiderProps) {
       {...props}
       style={{
         ...props.style,
-        ...(state.resizable ? { cursor: 'ew-resize' } : {})
+        ...(state.resizable ? {cursor: "ew-resize"} : {})
       }}
       width={state.width}
       onMouseDown={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         if (state.resizable) {
-          dispatch(e)
+          dispatch(e);
         }
         // Allows any mousdown events from parent to still occur
-        props.onMouseDown?.(e)
+        props.onMouseDown?.(e);
       }}
     />
-  )
+  );
 }
