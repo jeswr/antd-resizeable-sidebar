@@ -13,7 +13,8 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
