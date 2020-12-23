@@ -8,7 +8,7 @@
     "dist/index.js",
     "dist/index.d.ts",
     "dist/sidebar.js",
-    "dist/sidebar.ts"
+    "dist/sidebar.d.ts"
   ],
   "scripts": {
     "build": "tsc",
