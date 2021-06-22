@@ -37,7 +37,7 @@
   "homepage": "https://github.com/jeswr/antd-resizeable-sidebar#readme",
   "devDependencies": {
     "@babel/preset-react": "7.14.5",
-    "@jest/globals": "27.0.3",
+    "@jest/globals": "27.0.5",
     "@testing-library/react": "11.2.7",
     "@types/antd": "1.0.0",
     "@types/jest": "26.0.23",
