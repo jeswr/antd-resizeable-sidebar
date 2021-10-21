@@ -41,7 +41,7 @@
     "@testing-library/react": "12.1.2",
     "@types/antd": "1.0.0",
     "@types/jest": "27.0.2",
-    "@types/react": "17.0.30",
+    "@types/react": "17.0.31",
     "@types/react-dom": "17.0.10",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
