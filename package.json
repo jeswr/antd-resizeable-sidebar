@@ -40,7 +40,7 @@
     "@jest/globals": "29.7.0",
     "@testing-library/react": "12.1.5",
     "@types/antd": "1.0.0",
-    "@types/jest": "29.5.13",
+    "@types/jest": "29.5.14",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.3",
     "@typescript-eslint/eslint-plugin": "4.33.0",
