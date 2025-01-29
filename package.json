@@ -63,11 +63,11 @@
     "typescript": "5.7.3"
   },
   "dependencies": {
-    "antd": "^4.9.3",
+    "antd": "^5.23.3",
     "react": "^19.0.0"
   },
   "peerDependencies": {
-    "antd": "^4.9.3",
+    "antd": "^5.23.3",
     "react": "^19.0.0",
     "react-dom": "^17.0.1"
   },
