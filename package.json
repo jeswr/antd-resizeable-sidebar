@@ -39,7 +39,7 @@
     "@babel/preset-react": "7.26.3",
     "@jest/globals": "29.7.0",
     "@testing-library/react": "16.2.0",
-    "@types/antd": "1.0.0",
+    "@types/antd": "1.0.4",
     "@types/jest": "29.5.14",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
